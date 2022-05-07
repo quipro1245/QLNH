@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="QuanLyNhaHang.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+    <applicationSettings>
+        <QuanLyNhaHang.Properties.Settings>
+            <setting name="CONFIRM_CLOSE" serializeAs="String">
+                <value>Bạn có muốn đóng ứng dụng hay không?</value>
+            </setting>
+            <setting name="checkAccount" serializeAs="String">
+                <value>Sai tên tài khoản hoặc mật khẩu</value>
+            </setting>
+            <setting name="Notification" serializeAs="String">
+                <value>Thông báo!</value>
+            </setting>
+            <setting name="SomeBody" serializeAs="String">
+                <value>Bàn đã có người!</value>
+            </setting>
+            <setting name="EmptyTable" serializeAs="String">
+                <value>Bàn trống không thể chuyển sang bàn trống!</value>
+            </setting>
+            <setting name="ErrorDeleteFood" serializeAs="String">
+                <value>Có lỗi khi xóa món ăn!</value>
+            </setting>
+            <setting name="SuccessfullDeletion" serializeAs="String">
+                <value>Xóa món thành công</value>
+            </setting>
+            <setting name="ConfirmPassword" serializeAs="String">
+                <value>Xác nhận mật khẩu không trùng khóp. Vui lòng nhập lại mật khẩu!</value>
+            </setting>
+            <setting name="NotFound" serializeAs="String">
+                <value>Không tìm thấy thông tin này!</value>
+            </setting>
+            <setting name="RePasswordAndConfirm" serializeAs="String">
+                <value>Vui lòng nhập password mới và xác nhận lại!</value>
+            </setting>
+            <setting name="Pay" serializeAs="String">
+                <value>Bạn có chắc thanh toán hóa đơn cho bàn {0}\n Tổng tiền - (Tổng tiền/100)*Giảm giá\n =&gt; {1} - ({1}/100)x{2} = {3}đ</value>
+            </setting>
+            <setting name="SwitchTable" serializeAs="String">
+                <value>Bạn có thật sự muốn chuyển bàn {0} qua bàn {1}</value>
+            </setting>
+            <setting name="ConnectionString" serializeAs="String">
+                <value>Data Source=LAPTOP-SBC64RI0;Initial Catalog=QUANLYNHAHANG;Integrated Security=True</value>
+            </setting>
+            <setting name="Introduce" serializeAs="String">
+                <value>Chào mừng bạn đến với nhà hàng của chúng tôi.Một nhà hàng cao cấp 5 sao sẽ làm cho bạn hài lòng. Đến với nhà hàng của chúng tôi bạn sẽ được ăn những món ăn vô cùng tuyệt vời, khiến bạn không bao giờ quên. Ăn một lần nhớ trọn đời</value>
+            </setting>
+            <setting name="Hello" serializeAs="String">
+                <value>Welcome to Restaurant</value>
+            </setting>
+        </QuanLyNhaHang.Properties.Settings>
+    </applicationSettings>
+</configuration>

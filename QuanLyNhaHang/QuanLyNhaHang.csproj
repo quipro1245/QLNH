@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F96A7EC0-6F9E-4F01-9D49-B76DF4087BC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNhaHang</RootNamespace>
+    <AssemblyName>QuanLyNhaHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E901239A993A6FE2B67FAF45EFAEA3D382A7EF91</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>QuanLyNhaHang_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\Bill.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\BillInfo.cs" />
+    <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\Food.cs" />
+    <Compile Include="DTO\Menu.cs" />
+    <Compile Include="DTO\Table.cs" />
+    <Compile Include="frmAccountProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountProfile.Designer.cs">
+      <DependentUpon>frmAccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableManager.Designer.cs">
+      <DependentUpon>frmTableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAccountProfile.resx">
+      <DependentUpon>frmAccountProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableManager.resx">
+      <DependentUpon>frmTableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NH_1052.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundlogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goisua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home-Flowerless-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huong-dan-tao-anh-dong-tuyet-roi-1585c89b8e4984.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomhum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Administrator-Red-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46-468203_ic-ne-de-t-restaurant-table-png-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12186-womans-clothes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-dong-dep-cho-may-tinh %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-gif-2-min.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Atooma-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Favorite-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Reload-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cahoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canhca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caqua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ech.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finance-Bill-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nomvasalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ordered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-coffee-table-icon-wooden-table-angle-furniture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-delicious-roast-chicken-png-image_4572920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raui.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sed-18-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sed-18-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-facebook-button-blue-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-google-button-blue-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash-screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suonlon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongtin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-purple-abstract-background-design-white-purple-abstract-background-design-white-modern-background-138453758.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1194984762373696923pill-button-red_benji_pa_01.svg.hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttons_PNG44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttons_PNG128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-1024x576.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttons_PNG1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant-19-118825.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wine.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
